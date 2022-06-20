@@ -78,4 +78,4 @@ numeric_df = df.drop([
 # %%
 # for numeric only list of values using numpy
 unique_vals = np.unique(np.array(numeric_df))
-unique_value_list = list(np.unique(np/pd.array(df)))
+unique_value_list = list(np.unique(np.array(df)))
