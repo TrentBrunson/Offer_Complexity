@@ -72,10 +72,38 @@ if not files_present:
 else:
     print('WARNING: This file already exists!')
 # %%
-numeric_df = df.drop([
-                        'LOB_Name'
-])
+# quick look at numeric values only
+# add numeric shorter than dropping all obj/str
+numeric_df = df[[
+                        'LOB_ID',
+                        'chassis_id',
+                        'module_id',
+                        'item_unit_cost',
+                        'item_unit_price'
+]]
+numeric_df
+#%%
+# check for numeric data types only
+numeric_df.dtypes
+
+# OK - int and float only
+#%%
+unique_vals = np.unique(np.array(numeric_df))
+# unique_value_list = list(np.unique(np.array(df)))
+#%%
+"""
+# alternate way to get columns of numeric dataonly
+"""
+df.dtypes
+#%%
+df_excluded = df.select_dtypes(exclude=object)
+df_excluded
 # %%
 # for numeric only list of values using numpy
-unique_vals = np.unique(np.array(numeric_df))
-unique_value_list = list(np.unique(np.array(df)))
+unique_vals = np.unique(np.array(df_excluded))
+# %%
+unique_vals
+# %%
+unique_value_list = list(np.unique(np.array(df_excluded)))
+unique_value_list
+# %%
