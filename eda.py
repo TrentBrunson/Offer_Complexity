@@ -40,6 +40,12 @@ df.isnull().sum()
 # %%
 df.isna().sum()
 # isnull references this; isna
+# no need for dropna
 # %%
 pd.isnull
+# %%
+# cleaned data output
+df.to_csv('data/US_data_cleaned.csv', index=False, mode='x')
+# add code to check for output dir and make dir if not present 
+# overwrite if needed
 # %%
