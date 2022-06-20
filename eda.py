@@ -24,3 +24,22 @@ df.columns
 # %%
 df.describe()
 # %%
+# rename columns
+df = df.rename(columns= {'line_of_business_id' : 'LOB_ID',
+                        'line_of_business_name' : 'LOB_Name'})
+# %%
+# check for duplicated records
+dupes = df.duplicated()
+dupes
+# %%
+sum(dupes)
+# non dupes found in US data set
+# %%
+df.isnull().sum()
+# 0 nulls found
+# %%
+df.isna().sum()
+# isnull references this; isna
+# %%
+pd.isnull
+# %%
