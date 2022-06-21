@@ -32,14 +32,13 @@ skinny_df = df.drop(['line_of_business_id', 'chassis_id', 'ch_status', 'ch_regio
 skinny_df
 #%%
 # list comprehension for entire df
-pd.Series({c: df[c].unique() for c in df})
+pd.Series({c: df[c].unique() for c in skinny_df})
 # drop all 'status codes' and 'current version flag'
 #%%
 # put all unique values in list of lists for viewing/manipulation
-unique_list_of_lists = [df[i].unique().tolist() for i in df.columns]
+unique_list_of_lists = [df[i].unique().tolist() for i in skinny_df.columns]
 # %%
-numeric_df = df[[
-                        'chassis_id',
+numeric_df = skinny_df[[
                         'module_id',
                         'cost',
                         'price'
@@ -52,9 +51,14 @@ numeric_df.dtypes
 # OK - int and float only
 #%%
 unique_vals = np.unique(np.array(numeric_df))
+unique_vals
 # unique_value_list = list(np.unique(np.array(df)))
 # %%
-df.groupby(['LOB_Name']).size()
+skinny_df.groupby(['LOB_Name']).size()
 # %%
-df
+skinny_df
+# %%
+skinny_df.groupby(['LOB_Name', 'option_code', 'SKU']).count()
+# %%
+skinny_df.groupby(['LOB_Name', 'option_code', 'SKU']).sum()
 # %%
