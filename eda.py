@@ -113,7 +113,7 @@ unique_vals = np.unique(np.array(numeric_df))
 # unique_value_list = list(np.unique(np.array(df)))
 #%%
 """
-# alternate way to get columns of numeric dataonly
+# alternate way to get columns of numeric data only
 """
 df.dtypes
 #%%
