@@ -39,11 +39,10 @@ pd.Series({c: df[c].unique() for c in df})
 unique_list_of_lists = [df[i].unique().tolist() for i in df.columns]
 # %%
 numeric_df = df[[
-                        'LOB_ID',
                         'chassis_id',
                         'module_id',
-                        'item_unit_cost',
-                        'item_unit_price'
+                        'cost',
+                        'price'
 ]]
 numeric_df
 #%%
