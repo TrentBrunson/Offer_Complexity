@@ -184,3 +184,37 @@ fig, ax = plt.subplots(figsize=(10,8))
 bp_outliers_removed = sns.boxplot(data = outliers_removed_df)
 bp.set_xticklabels(bp_outliers_removed.get_xticklabels(), rotation=75)
 # %%
+df.groupby(['LOB_Name']).size()
+'''
+OUTPUT:
+Inspiron Notebooks     46149
+Precision Notebooks    23464
+Vostro Notebook        14476
+XPS Notebooks           9795
+'''
+# %%
+df.groupby(['LOB_Name', 'option_code', 'sku_num']).size()
+
+# %%
+df.columns
+# %%
+df.groupby(['LOB_Name', 'option_code', 'sku_num']).count()
+
+# %%
+df.groupby(['LOB_Name', 'option_code', 'sku_num', 'item_unit_price']).size()
+
+# %%
+df.groupby(['LOB_Name', 'option_code', 'sku_num', 'item_unit_price', 'item_unit_cost']).size()
+
+# %%
+df.sku_num.value_counts()
+
+# %%
+df.loc[df.sku_num == '210-ARLK'].count()
+
+# %%
+df.groupby(['LOB_Name', 'option_code']).count()
+# %%
+df.groupby(['LOB_Name', 'option_code', 'sku_num']).count()
+
+# %%
