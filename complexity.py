@@ -62,3 +62,50 @@ skinny_df.groupby(['LOB_Name', 'option_code', 'SKU']).count()
 # %%
 skinny_df.groupby(['LOB_Name', 'option_code', 'SKU']).sum()
 # %%
+# by services sku
+skinny_df.groupby(['LOB_Name', 'option_code', 'SKU',
+                 'item_class_short_desc']).count()
+
+# %%
+skinny_df.columns
+# %%
+price_max_min = skinny_df.groupby(['LOB_Name', 'option_code', 'SKU'])['price'].aggregate(['min', 'max'])
+price_max_min
+
+# %%
+price_max_min = skinny_df.groupby(['LOB_Name'])['price'].aggregate(['min', 'max'])
+price_max_min
+# %%
+# options per LOB
+# SKU per LOB
+multi_view = skinny_df.groupby(['LOB_Name']).aggregate(
+                            {
+                                'LOB_Name' : 'count',
+                                'option_code' : 'count',
+                                'SKU' : 'count',
+                                'price' : ['min', 'max'],
+                                'cost' : ['min', 'max']
+                            })
+multi_view
+# %%
+# services breakout
+services_view = skinny_df.groupby(['LOB_Name', 'item_type_name']).aggregate(
+                            {
+                                'LOB_Name' : 'count',
+                                'option_code' : 'count',
+                                'SKU' : 'count',
+                                'price' : ['min', 'max'],
+                                'cost' : ['min', 'max']
+                            })
+services_view                            
+# %%
+# by region
+services_view = skinny_df.groupby(['LOB_Name', '''insert region here''' 'item_type_name']).aggregate(
+                            {
+                                'LOB_Name' : 'count',
+                                'option_code' : 'count',
+                                'SKU' : 'count',
+                                'price' : ['min', 'max'],
+                                'cost' : ['min', 'max']
+                            })
+services_view      
