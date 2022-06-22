@@ -113,3 +113,11 @@ services_view
 '''
 creat visulations...
 '''
+# %%
+'''
+showing by catalog just proliferates pricing options
+need to drop catalog columsn (and others as well) that
+duplicate rows of the same sku
+-- extract each unique SKU, that's the complexity model
+showing catalogs conflates pricing and marketing decisions
+'''
