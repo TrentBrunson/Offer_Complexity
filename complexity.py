@@ -109,3 +109,7 @@ services_view = skinny_df.groupby(['LOB_Name', '''insert region here''' 'item_ty
                                 'cost' : ['min', 'max']
                             })
 services_view      
+# %%
+'''
+creat visulations...
+'''
