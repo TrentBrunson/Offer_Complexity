@@ -39,3 +39,9 @@ emea_unique
 # join data sets and set like columns same
 
 # first merge emea and apj - most alike
+df_emeapj = pd.concat([df_apj, df_emea])
+df_emeapj.shape
+# right number of rows
+# next reshape rows & columns
+# %%
+# reduce number of rows to work with - drop repeated catalog info
