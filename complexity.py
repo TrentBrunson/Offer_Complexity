@@ -111,7 +111,7 @@ services_view = skinny_df.groupby(['LOB_Name', '''insert region here''' 'item_ty
 services_view      
 # %%
 '''
-creat visulations...
+create visulations...
 '''
 # %%
 '''
@@ -121,5 +121,5 @@ duplicate rows of the same sku
 -- extract each unique SKU, that's the complexity model
 showing catalogs conflates pricing and marketing decisions
 
-ML model - unsupervised learning, multi=classification model for HW, SW & services
+ML model - unsupervised learning; multi=classification model for HW, SW & services
 '''
