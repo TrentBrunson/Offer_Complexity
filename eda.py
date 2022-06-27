@@ -13,20 +13,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 #%%
 df = pd.read_csv('data\DOM_NBK_DATA_AMER_202206102000.csv')
-
-'''
-real input code...
-
-# read input file from directory - name changes week to week
-for f in glob.glob('data/input/*'):
-    df = pd.read_excel(f)
-df
-
-df.info
-df.describe()
-df.value_counts()
-df.count()
-'''
 # %%
 df
 # %%
