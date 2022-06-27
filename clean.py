@@ -66,3 +66,17 @@ df_emea.count()
 # item_unit_cost           1210432
 # price                     560775
 # %%
+df_amer.isna().sum()
+# %%
+df_amer.isna().sum().sum()
+# %%
+df_apj.isna().sum()
+# %%
+df_apj.isna().sum().sum()
+# %%
+df_emea.isna().sum()
+# %%
+df_emea.isna().sum().sum()
+# %%
+'''no other hidden nulls in rows'''
+# %%

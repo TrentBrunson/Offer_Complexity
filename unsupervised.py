@@ -7,6 +7,13 @@ still in there for some active items
 import pandas as pd
 import glob
 import os
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+import plotly.express as px
+#%%
+import hvplot.pandas
+
 #%%
 df = pd.read_csv('data\input\\NBK_US-CA-MX_WITH_CATALOGUE_20220622.csv')
 df
