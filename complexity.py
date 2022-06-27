@@ -120,4 +120,6 @@ need to drop catalog columsn (and others as well) that
 duplicate rows of the same sku
 -- extract each unique SKU, that's the complexity model
 showing catalogs conflates pricing and marketing decisions
+
+ML model - unsupervised learning, multi=classification model for HW, SW & services
 '''
