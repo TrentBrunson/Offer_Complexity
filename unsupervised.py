@@ -10,6 +10,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
+#%%
 import plotly.express as px
 #%%
 import hvplot.pandas
